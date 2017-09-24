@@ -1,0 +1,71 @@
+
+body{
+background: white;    
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+}
+    
+#box{
+    height: 600px;
+    width: 782px;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+
+#wordings{
+    position: absolute;
+    background-color:rgba(255,255,255,0.8);
+    color:black;
+    font-size: 24;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center;
+    border: 4px solid grey;
+    width: 100%;
+    height: 150px;
+    top:450px;
+    padding: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: Microsoft JhengHei,Times;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+#b1,#b2{
+    font-family: Microsoft JhengHei,Times;
+    font-size: 20px;
+    margin-top: 220px;
+    margin-bottom: -200px;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    position:relative;
+    background-color:rgba(255,255,255,0.6);
+    color: black;
+    display:none;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;  
+}
+                                  

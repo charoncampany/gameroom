@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>對話</title>
+<script src="jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="talk.css">
+          <style>
+    #box{
+        background-image: url(bird.jpg);
+    }
+        
+    </style>     
+    <script>
+        $(document).ready(function() {
+
+            
+var progress = 0;
+var txt;
+            
+    function eventHandler() {
+    switch (progress) {
+            
+		case 0:
+                txt = "「啾啾啾!」";
+                break;
+            
+  		case 1:
+            txt = " ";
+            $("#b1, #b2").show();
+            $("#wordings").hide();
+            $('#b1').mouseenter(skip);
+            $('#b2').mouseenter(nonskip);
+                
+            function skip(){              $('#b1').click(eventHandler);
+            progress = 2;
+            }
+            
+            function nonskip(){
+            $('#b2').click(eventHandler);
+            progress = 6;
+            }
+             break;
+        
+        case 2:
+            $("#wordings").show();
+            $("#b1, #b2").hide();
+            txt = "「啾啾啾？啾啾啾啾啾！」"
+                break;
+            
+        case 3:
+                txt = "「啾……」（十分可憐的樣子）";
+                break;
+        case 4:
+                txt = "無法溝通，還是去找伊路贊分局長吧。";
+                break;
+            
+        case 5:
+            
+                window.location = "illucious.html";
+                break;
+            
+  		case 6:
+            $("#wordings").show();
+            $("#b1, #b2").hide();
+                txt = "「唉我真的好累哦！」";
+                break;
+            
+        case 7:
+              txt = "(將辦公室的事情告訴了他)";
+                break;
+        
+        
+        case 8:
+                txt = "「卡魯普斯啊，有時真的有點令人意想不到，不過他本身也神神秘秘的。」";
+                break;
+    
+        case 9:
+              txt = "「或者有甚麼難言之隱也不定？人人都有點不能說的故事嘛……（很可憐的樣子）」";
+                break;
+        
+            
+        case 10:
+              txt = "「那本書哦是他問我借的，我都忘了！」";
+                break;
+        
+        
+        case 11:
+              txt = "「現在想來他這麼討厭伊路贊也不是沒有理由……唉。」";
+                break;
+        
+                          
+        case 12:
+              txt = "百宜分局長太多話了，你決定去找伊路贊分局長。";
+                break;
+            
+        case 13:
+        window.location = "illucious.html";
+        break;
+        
+        }
+        
+  		      progress++;
+		        $('#wordings').html(txt);
+		  }
+
+            
+		$('#wordings').click(eventHandler);
+            
+        })
+    </script>
+
+</head>
+<body>
+
+
+<div id="box" class="noselect">
+    
+    <div id= "b1">
+        你不會魔法
+    </div>
+    
+    <div id= "b2">
+        用魔法來聽百宜分局長的話
+    </div>
+    
+    <div id="wordings">
+  
+         百宜分局長正在處理公文。
+
+    </div>
+    
+    
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>卡魯普斯的房間</title>
+<style>
+    #box{
+        background-image: url(room.jpg)
+    }
+    </style>
+
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="game.css">
+    
+    <script>
+        $(document).ready(function() {
+        $("#yes0").hide();
+        $("#submit").hide();
+            
+        $("#iphone").mouseover(function(){
+    $("#wordings p").html("卡魯普斯的手機，鎖上了但能看到背景圖，好像是由各種不同美食照合併而成的一張圖片，似曾相識的菜色。");
+        });
+            
+        $("#doll").mouseover(function(){
+    $("#wordings p").html("奇異鳥公仔，壓著一張百宜分局長的「Blackstone」唱片。");
+        }); 
+            
+        $("#paperwork").mouseover(function(){
+    $("#wordings p").html("很多不同的文件。");
+        }); 
+            
+        $("#icarus").mouseover(function(){
+    $("#wordings p").html("一張似乎是來自人界的油畫，黑白版本。");
+        }); 
+
+        $("#back").mouseover(function(){
+    $("#wordings p").html("貼著一堆文件、剪報、信件，大多是公務相關的東西。");
+        }); 
+            
+        $("#map").mouseover(function(){
+    $("#wordings p").html("電子屏幕，顯示著人界地圖。");
+        }); 
+
+        $("#bed").mouseover(function(){
+    $("#wordings p").html("似乎是寵物床。");
+        }); 
+
+        $("#muggy").mouseover(function(){
+    $("#wordings p").html("寫著I <3 NZ的馬克杯，裡面有一點水，旁邊是一盒寫著「Prozac」的藥物，是來自人界的嗎？");
+        }); 
+
+        $("#fridge").mouseover(function(){
+    $("#wordings p").html("小冰箱，裡面似乎放著來自亞洲的各種瓶裝奶茶。");
+        }); 
+
+        $("#howdah").mouseover(function(){
+    $("#wordings p").html("展示著一把槍……仔細看是模型來著，上方掛著一張由奧林帕斯學院頒發的嘉許狀，寫著甚麼射擊冠軍，但獎狀似乎是被撕開了兩半再重新拼好的。");
+        }); 
+        
+        $("#billy1").mouseover(function(){
+    $("#wordings p").html("看見一本名為《活著的理由》的書，出版社：企鵝出版集團（倫敦）。");
+        }); 
+            
+        $("#billy2").mouseover(function(){
+    $("#wordings p").html("看見一本名為《簡易非魔法原子料理指南》的書，出版社：長毛象學會（神界）。");
+        }); 
+            
+        $("#billy3").mouseover(function(){
+    $("#wordings p").html("找到一本人界四幕歌劇《唐卡洛》的完整樂譜，封面有百宜分局長的簽名。");
+        $("#op1").fadeIn();
+        $("#op2").fadeIn();
+        }); 
+        
+        $("#photo").click(function(){
+    $("#wordings p").html("相框裡是一張婚禮照片。");
+    $("#wedding").show();
+    $("#iwine").hide();
+    $("#newspaper").hide();
+        }); 
+        
+        $("#wedding").click(function(){
+        $("#wedding").hide();
+        });
+        
+            
+        $("#wine").click(function(){
+    $("#wordings p").html("沒有打開過的靈魂之酒");
+    $("#iwine").show();
+    $("#wedding").hide();
+    $("#newspaper").hide();
+        }); 
+        
+        $("#iwine").click(function(){
+        $("#iwine").hide();
+        });
+    
+        $("#wanted").click(function(){
+    $("#wordings p").html("古牆箭靶，不明物質的黑色箭矢……");
+    $("#newspaper").show();
+    $("#wedding").hide();
+    $("#iwine").hide();
+        }); 
+        
+        $("#newspaper").click(function(){
+        $("#newspaper").hide();
+        });
+
+
+})
+    </script>
+
+</head>
+<body>
+
+    
+<div id="box" class="noselect">
+    
+    <a href="illucious.html"><div id="op1">
+        尋找伊路贊分局長
+    </div></a>
+    <a href="birdy.html"><div id="op2">
+        尋找百宜分局長
+        </div></a>
+
+    <div id="photo">
+    </div>
+    <div id="iphone">
+    </div>
+    <div id="doll">
+    </div>
+    <div id="paperwork">
+    </div>
+    <div id="muggy">
+    </div>
+    <div id="wine">
+    </div>
+    <div id="wanted">
+    </div>
+    <div id="back">
+    </div>
+    <div id="icarus">
+    </div>
+    <div id="howdah">
+    </div>
+    <div id="fridge">
+    </div>
+    <div id="map">
+    </div>
+    <div id="billy1">
+    </div>
+    <div id="billy2">
+    </div>
+    <div id="billy3">
+    </div>
+    <div id="bed">
+    </div>
+    
+<!--popup--->
+
+<div id="wedding">
+    <img src="wedding.jpg">
+</div>
+
+<div id="iwine">
+    <img src="wine.jpg">
+</div>
+    
+<div id="newspaper">
+    <img src="newspaper.jpg">
+    </div>
+    
+<!--popupend--->  
+
+    
+    </div>
+    
+<div id="wordings">
+<p>卡魯普斯的房間</p>
+</div>
+
+
+    
+</body>
+</html>

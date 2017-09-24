@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>對話</title>
+<script src="jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="talk.css">
+          <style>
+    #box{
+        background-image: url(illu.jpg);
+    }
+        
+    </style>     
+    <script>
+        $(document).ready(function() {
+
+            
+var progress = 0;
+var txt;
+            
+    function eventHandler() {
+    switch (progress) {
+            
+		case 0:
+                txt = "「有甚麼事？」";
+                break;
+            
+  		case 1:
+            txt = " ";
+            $("#b1, #b2").show();
+            $("#wordings").hide();
+            $('#b1').mouseenter(skip);
+            $('#b2').mouseenter(nonskip);
+                
+            function skip(){              $('#b1').click(eventHandler);
+            progress = 2;
+            }
+            
+            function nonskip(){
+            $('#b2').click(eventHandler);
+            progress = 5;
+            }
+             break;
+        
+        case 2:
+            $("#wordings").show();
+            $("#b1, #b2").hide();
+            txt = "「有這時間來廢話還不回去工作？」"
+                break;
+            
+        case 3:
+                txt = "（回到蓋羅斯辦公室或其他地方）";
+                break;
+            
+        case 4:
+                window.location = "index.html";
+                break;
+            
+  		case 5:
+            $("#wordings").show();
+            $("#b1, #b2").hide();
+                txt = "「……」";
+                break;
+            
+        case 6:
+              txt = "……";
+                break;
+        
+        
+        case 7:
+                txt = "「……」";
+                break;
+    
+        case 8:
+              txt = "……";
+                break;
+        
+            
+        case 9:
+              txt = "「你回去吧。」";
+                break;
+        
+        
+        case 10:
+            $("#box").css("background-image","url(empty.jpg)");
+              txt = "伊路贊分局長走了。";
+                break;
+        
+                          
+        case 11:
+              txt = "去別的地方吧。";
+                break;
+        }
+        
+  		      progress++;
+		        $('#wordings').html(txt);
+		  }
+
+            
+		$('#wordings').click(eventHandler);
+            
+        })
+    </script>
+
+</head>
+<body>
+
+
+<div id="box" class="noselect">
+    
+    <div id= "b1">
+        沒甚麼事
+    </div>
+    
+    <div id= "b2">
+        （告訴他有關蓋羅斯辦公室的事情）
+    </div>
+    
+    <div id="wordings">
+  
+         你找到了伊路贊分局長。
+
+    </div>
+    
+    
+</div>
+
+    </body>
+</html>
